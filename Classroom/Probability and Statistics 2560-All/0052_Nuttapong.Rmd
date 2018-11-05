@@ -1,0 +1,52 @@
+<h1>The Most Common Unisex Names In America: Is Yours One Of Them?</h1>
+2015-04-20<br>
+ชื่อ:ณัฐพงศ์ แป้นทอง<br>
+รหัสนักศึกษา:59070052<br>
+เวลาเรียน:อังคาร 9.00-12.00<br>
+โจทย์ปัญหา:<br>
+1.ชื่อใดที่ใช้ทั้งผู้ชายและผู้หญิงในประเทศสหรัฐอเมริกาเป็น 10 อันดับแรก?<br>
+1.load libraries
+```{r}
+library(tidyverse)
+library(fivethirtyeight)
+library(stringr)
+
+```
+2.Look at the data (unisex_names)
+```{r}
+#print out the dataframe
+unisex_names$total = as.integer(unisex_names$total)
+unisex_names
+
+
+# make it tidy
+unisex_names_tidy <- unisex_names %>%
+  gather(type, servings, -c(name, as.integer(total))) %>%
+  mutate(
+type = str_sub(type, start=1, end=-10)
+) %>%
+arrange(name, total)
+
+unisex_names_tidy 
+  
+```
+3.Looking for answers<br>
+3.1 ชื่อใดที่ใช้ทั้งผู้ชายและผู้หญิงในประเทศสหรัฐอเมริกาเป็น 10 อันดับแรก?<br>
+```{r}
+name10 <- unisex_names_tidy %>%
+  group_by(name) %>%
+  summarise(total_name = sum(total)) %>%
+  arrange(desc(total_name)) %>%
+  head(10)
+
+name10 
+  
+```
+<h1>สรุปผล</h1>
+ชื่อที่ใช้ทั้งผู้ชายและผู้หญิงในประเทศสหรัฐอเมริกาเป็น 10 อันดับแรก
+```{r}
+name10
+```
+
+
+
