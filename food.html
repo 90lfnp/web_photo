@@ -54,61 +54,12 @@
 
 	<!-- content -->
 	<!--slide Pic-->
-	
-	<div class="slideshow-container">
+	<div class="contrainer">
+		<div class="row justify-content-md-center" >
+			
+		</div>
 
-<div class="mySlides fade">
-  <img src="img/cover-food01.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="img/cover-food02.jpg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="img/cover-food03.jpg" style="width:100%">
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
+	</div>
 	
 	<!-- Menu Pic-->
 	
@@ -245,15 +196,15 @@ function showSlides(n) {
 
 		<!-- footer -->
 
-		<footer id="sitefooter" class="row">
-		<div class="container text-center">
+
+		<div class="container-fluid foot-ter">
 			<div class="row justify-content-md-center">
-				<div class="col-lg-1 text-center pd-0">
+				<div class="col-md-1 text-center">
 					<br>
 					LIKE US:
 					
 				</div>
-				<div class="col-lg-2 pd-0">
+				<div class="col-md-2 pd-0">
 					<br>
 					<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fmooyor300&width=300&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="300" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
 					</iframe>
@@ -262,11 +213,7 @@ function showSlides(n) {
 				
 
 			</div>
-			
-		
-	 	
-	 	</div>
-		</footer>
+		</div>
 
 		<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
