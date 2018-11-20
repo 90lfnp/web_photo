@@ -18,7 +18,7 @@
 <body>
 
 	<!-- Navigation -->
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-md sticky-top">
 			<div class="flex-logo"><a class="navbar-brand"><img src="img/logo.png" width="100"></a></div>
 			
 			
@@ -56,12 +56,16 @@
 			</div>
 
 			<div class="flex-cart">
-				<i class="fas fa-shopping-cart"></i>
+				<button type="button" class="btn btn-warning" id="cart-button" onclick="myFunction()"><i class="fas fa-shopping-cart">&nbsp;</i></button>
 			</div>
 
 
 		</nav>
-	<br>
+
+	<!-- cart -->
+	<div class="container-fluid" id="cart_item_list">
+		
+	</div>
 
 	<!-- content -->
 	<!--slide Pic-->
@@ -255,6 +259,16 @@
 		<script>
 		  AOS.init();
 		</script> -->
+		<script>
+		function myFunction() {
+		    var x = document.getElementById("cart_item_list");
+		    if (x.style.display === "inline") {
+		        x.style.display = "none";
+		    } else {
+		        x.style.display = "inline";
+		    }
+		}
+		</script>
 
 </body>
 </html>

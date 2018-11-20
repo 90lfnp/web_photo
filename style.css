@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 
@@ -31,15 +33,24 @@
   
 }
 
-span .totalProduct {
-    background: #cb0000;
-    border-radius: 50px;
-    position: absolute;
-    padding: 0 7px;
-    font-size: 13px;
-    bottom: 9%;
-    right: 48%;
+#cart-button{
+  color: #F8E600;
+  font-size: 0.75em;
+  background-color: #b10000;
+  height: 40px;
 }
+
+#cart_item_list{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  overflow: scroll !important;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 80px;
+  background-color: #b10000;
+}
+
 
 .flex-cart{
   font-size: 2em;
