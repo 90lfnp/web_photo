@@ -25,7 +25,20 @@
   .navbar .navbar-collapse{
     order: 4;
   }
+  .btn{
+    width: 90%;
+  }
   
+}
+
+span .totalProduct {
+    background: #cb0000;
+    border-radius: 50px;
+    position: absolute;
+    padding: 0 7px;
+    font-size: 13px;
+    bottom: 9%;
+    right: 48%;
 }
 
 .flex-cart{
