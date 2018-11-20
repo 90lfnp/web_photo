@@ -143,6 +143,11 @@ body{
 {
   color: #b10000;
   background-color: #F8E600;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
 }
 div.transbox p {
   margin: 5%;
