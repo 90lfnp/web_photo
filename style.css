@@ -11,16 +11,28 @@
 
 
 /*---Media Queries --*/
-@media (max-width: 992px) {
-
+@media (max-width: 767px) {
+  
+  .navbar .flex-logo{
+    order: 2;
   }
-@media (max-width: 768px) {
-  
-}
-@media (max-width: 576px) {
+  .navbar .flex-ham{
+    order: 1;
+  }
+  .navbar .flex-cart{
+    order: 3;
+  }
+  .navbar .navbar-collapse{
+    order: 4;
+  }
   
 }
 
+.flex-cart{
+  font-size: 2em;
+  color: #b10000;
+}
+flex-direction: row-reverse;
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
